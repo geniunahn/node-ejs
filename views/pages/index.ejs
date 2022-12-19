@@ -11,24 +11,21 @@
     <nav>
       <a href="/">home</a>
       <a href="/about">about</a>
+      <a href="/coffee">detail</a>
     </nav>
     <h1><%= title %></h1>
-    <!-- 아래 name 이 홍길동이면 if문이 실행되고 아니면 else가 실행된다. -->
-    <% if(name == '둘리') { %>
-    <h1><%= name %>의 홈페이지에 오신것을 환영합니다.</h1>
-    <% } else { %>
-    <p>아무개님 누구세요?</p>
-    <% } %>
+    <form action="/create" method="get">
+      <label for="name">name: </label>
+      <input type="text" id="name" name="name" /> <br /><br />
+      <button type="submit">전송</button>
+    </form>
 
-    <!-- 값이 표시되지 않음 (처리만 됨) -->
-    <% 1 + 1 %>
-
-    <!-- 값이 표시할 때 (%=) -->
-    <p><%= 5 * 2 %></p>
-
-    <!-- 반복 -->
-    <% for(let i = 0; i < 5; i++) { %>
-    <p>출력된 html <%= i %></p>
-    <% } %>
+    <h1>커피 제품 보기</h1>
+    <!-- 커피이름을 입력하면 coffee.ejs에 -->
+    <form action="/coffee" method="get">
+      <label for="name">coffee name: </label>
+      <input type="text" id="name" name="name" /> <br /><br />
+      <button type="submit">전송</button>
+    </form>
   </body>
 </html>
