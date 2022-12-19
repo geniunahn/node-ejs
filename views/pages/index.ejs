@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>홈</title>
+    <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
@@ -12,6 +12,17 @@
       <a href="/">home</a>
       <a href="/about">about</a>
     </nav>
-    <h1>홈페이지</h1>
+    <h1><%= title %></h1>
+    <h1><%= name %>의 홈페이지에 오신것을 환영합니다.</h1>
+    <!-- 값이 표시되지 않음 (처리만 됨) -->
+    <% 1 + 1 %>
+
+    <!-- 값이 표시할 때 (%=) -->
+    <p><%= 5 * 2 %></p>
+
+    <!-- 반복 -->
+    <% for(let i = 0; i < 5; i++) { %>
+    <p>출력된 html <%= i %></p>
+    <% } %>
   </body>
 </html>

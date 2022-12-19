@@ -7,9 +7,12 @@ app.set("view engine", "ejs");
 // 정적파일 경로 지정
 app.use(express.static("public"));
 
-// ejs 문서로 연결하는 경로, 라우팅
+// home 라우팅
 app.get("/", (req, res) => {
-  res.render("pages/index.ejs");
+  const title = "홈페이지";
+  const name = "홍길동";
+  //   name 변수 값을 index.ejs 문서에 전달한다는 의미다.
+  res.render("pages/index.ejs", { title, name });
 });
 
 // about 라우팅
