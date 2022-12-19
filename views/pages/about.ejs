@@ -11,6 +11,15 @@
       <a href="/">home</a>
       <a href="/about">about</a>
     </nav>
-    <h1>About</h1>
+    <h1><%= title %> 페이지</h1>
+    <!-- 아래 name 이 홍길동이면 if문이 실행되고 아니면 else가 실행된다. -->
+    <% if(name == '홍길동') { %>
+    <h1>
+      저는 <%= name %>이라고 합니다. 나이는 <%= age %>세 <%= address %>에
+      거주하고 있습니다.
+    </h1>
+    <% } else { %>
+    <p>아무개님 누구세요?</p>
+    <% } %>
   </body>
 </html>
